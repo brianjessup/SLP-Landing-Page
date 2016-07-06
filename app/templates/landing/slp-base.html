@@ -1,0 +1,351 @@
+{% load i18n %}
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="{{ LANGUAGE_CODE }}" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="{{ LANGUAGE_CODE }}" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="{{ LANGUAGE_CODE }}" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="{{ LANGUAGE_CODE }}" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="{{ LANGUAGE_CODE }}" class=""> <!--<![endif]-->
+
+<title>SLP San Diego</title>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="{{ STATIC_URL }}SLP-Logo-Ball-16.ico?v=1" type="image/x-icon">
+    <link rel="icon" href="{{ STATIC_URL }}img/SLP/SLP-Logo-Ball-128.png" sizes="128x128">
+
+    {% block meta_properties %}
+        <meta name="application-name" content="SLP San Diego">
+        <meta name="description" content="">
+    {% endblock %}
+
+    {% block og_meta_properties %}
+        <meta property="og:type"          content="website" />
+        <meta property="og:url"           content="{{ GIFTOVUS_SITE_PATH }}" />
+        <meta property="og:image"         content="{{ GIFTOVUS_SITE_PATH }}{% static "img/giftovus-bg-1200px.jpg" %}" />
+        <meta property="og:title"         content="Gift better, together | Giftovus" />
+        <meta property="og:description"   content="Giftovus is a fast, easy and fun way to brainstorm gift ideas with friends and family. Post an idea, get some advice, and transform it into a thoughtful gift - it's that easy. At Giftovus, it's the thoughts that count!" />
+    {% endblock %}
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Theme CSS -->
+    <link href="{% static 'css/grayscale.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <img src="{% static 'img/SLP/SLP_Logo_AItransparent-2.png' %}" style="margin-top: -12px;" alt="Startup Leadership" title="Startup Leadership" />
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#mentors">Mentors</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#curriculum">Curriculum</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#apply">Apply</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading" style="text-shadow: 2px 2px #000; margin-top: 100px;">Startup Leadership Program</h1>
+                        <p class="intro-text" style="text-shadow: 2px 2px #000;">A non-profit, non-equity, training program for founders and CEOs of startups.</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>About SLP San Diego</h2>
+                    <p>Founded in 2008, the San Diego chapter of Startup Leadership Program accepts 25 Fellows per year into its global, world-class training program.</p>
+                    <p>Over 6 months, Fellows are exposed to the basic building blocks of launching, growing and scaling a startup through mentoring by leaders in the community.</p>
+                    <p>SLP is a non-profit and takes no equity in your startup and does not require a startup to apply.</p>
+                    <a href="https://www.f6s.com/slp-sandiego2017/apply" class="btn btn-default btn-lg">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mentors Section -->
+    <section id="mentors" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Mentors</h2>
+                    <p>Meet the mentors for 2016-2017</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="https://www.linkedin.com/in/martin-bridges-0a7380">
+                            <img class="img-responsive img-circle" style="padding: 2px; background-color: #FFF; margin-bottom: 5px;" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAXKAAAAJDk0ZjliYTk1LTU5MzYtNDRmYi1iY2IxLTIxZTY2NTgyNTdkMQ.jpg" alt="Jessica Jessup"/>
+                        </a>
+                        <p>
+                            <a style="color: #ff9966" href="https://www.linkedin.com/in/martin-bridges-0a7380">Martin Bridges</a>
+                        </p>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="https://www.linkedin.com/in/christiansalaman">
+                            <img class="img-responsive img-circle" style="padding: 2px; background-color: #FFF; margin-bottom: 5px;" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/5/005/01b/383/3cbb855.jpg" alt="Christian Salaman"/>
+                        </a>
+                        <p>
+                            <a href="https://www.linkedin.com/in/christiansalaman">Christian Salaman</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section id="curriculum" class="text-center content-section">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Curriculum*</h2>
+                    <table  style="background-color: #000;" class="table">
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th>Session</th>
+                                <th>Mentors</th>
+                            </tr>
+                        </thead>
+                        <tbody  class="text-left">
+                            <tr>
+                                <td>Sept</td>
+                                <td>Kickoff</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td style="border-top: none;"></td>
+                                <td>Fellow/Mentor Speed Date</td>
+                                <td>All</td>
+                            </tr>
+                            <tr>
+                                <td style="border-top: none;"></td>
+                                <td>Market Evaluation</td>
+                                <td>TBD</td>
+                            </tr>
+                            <tr>
+                                <td>Oct</td>
+                                <td>Market Validation How-To</td>
+                                <td>Andy White & More</td>
+                            </tr>
+                            <tr>
+                                <td style="border-top: none;"></td>
+                                <td>Customer Development: From Customer to Advocate</td>
+                                <td>Jeremiah Gardner</td>
+                            </tr>
+                            <tr>
+                                <td>Nov</td>
+                                <td>How to Pitch: Partners, Investors</td>
+                                <td>Chris D'eon & More</td>
+                            </tr>
+                            <tr>
+                                <td style="border-top: none;"></td>
+                                <td>Pitchfest</td>
+                                <td>Various early stage investors</td>
+                            </tr>
+                            <tr>
+                                <td style="border-top: none;"></td>
+                                <td>Finance for Growth | Termsheets</td>
+                                <td>Eric Gasser</td>
+                            </tr>
+                            <tr>
+                                <td>Dec</td>
+                                <td>How I Got Funded | Hacking Investors</td>
+                                <td>JD & SLP Graduates</td>
+                            </tr>
+                            <tr>
+                                <td>Jan</td>
+                                <td>Negotiations</td>
+                                <td>Various</td>
+                            </tr>
+                            <tr>
+                                <td style="border-top: none;"></td>
+                                <td>Growth Hacking</td>
+                                <td>Joel Jay</td>
+                            </tr>
+                            <tr>
+                                <td>Feb</td>
+                                <td>Corporate & IP Strategy</td>
+                                <td>Christian Salaman</td>
+                            </tr>
+                            <tr>
+                                <td style="border-top: none;"></td>
+                                <td>Hiring, Retaining, Compensation</td>
+                                <td>Martin Bridges</td>
+                            </tr>
+                            <tr>
+                                <td>March</td>
+                                <td>Startup Survival | Board Issues</td>
+                                <td>Various</td>
+                            </tr>
+                            <tr>
+                                <td style="border-top: none;"></td>
+                                <td>Demo Day</td>
+                                <td>All</td>
+                            </tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                <p><small>*We tailor our curriculum to the Fellows' needs and mentor availability. Adjustments may be made once all Fellows are selected.</small></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apply Section -->
+    <section id="apply" class="text-center content-section">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2 style="text-shadow: 2px 2px #000;">Apply</h2>
+                    <p style="text-shadow: 2px 2px #000;">Apply to SLP San Diego by filling out a short form.</p>
+                    <a href="https://www.f6s.com/slp-sandiego2017/apply" class="btn btn-default btn-lg">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="text-center content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Contact SLP San Diego</h2>
+                    <p>Feel free to email us if you have any questions, give us a suggestion, or to just say hello!</p>
+                    <script type="text/javascript" src="https://form.jotform.com/jsform/61855286736165"></script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="Location" class="text-center content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <p>SLP San Diego holds the majority of its educational sessions at 101 West Broadway in downtown San Diego.</p>
+                </div>
+            </div>
+        </div>
+    <div id="map" style="margin-top: 0px !important;"></div>
+    </section>
+
+    <!-- Sponsor Section -->
+    <section id="sponsors" class="text-center content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>SLP San Diego Sponsors</h2>
+                    <p>We are able to bring our Fellows a high-quality program with the support of our sponsors.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="http://www.pillsburylaw.com/san-diego">
+                            <img class="img-responsive" style="padding: 2px -5px -5px 2px; background-color: #FFF; margin-bottom: 5px;" src="http://www.pillsburylaw.com/images/Pillsbury.png" alt="Jessica Jessup"/>
+                        </a>
+                        <p>
+                            <a style="color: #ff9966" href="http://www.pillsburylaw.com/san-diego">Pillsbury</a>
+                        </p>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <a href="http://annemasri.com/">
+                            <img class="img-responsive" style="padding: 2px; background-color: #FFF; margin-bottom: 5px;" src="http://annemasri.com/wp-content/uploads/2013/08/logoWeb722-resized-image-960x580.jpg" alt="Christian Salaman"/>
+                        </a>
+                        <p>
+                            <a href="http://annemasri.com/">Anne Masri</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Startup Leadership Program 2016</p>
+        </div>
+    </footer>
+
+
+<!-- libs -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3BWZnqYdoOzctHN9xi_C_mgFHHHjTy6U"></script>
+
+<!-- Theme JavaScript -->
+<script src="{% static 'js/grayscale.min.js' %}"></script>
+
+</body>
+</html>
