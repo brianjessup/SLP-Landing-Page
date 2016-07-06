@@ -3,7 +3,7 @@ import os.path
 import os
 
 PROJECT_DIR = os.path.dirname(__file__)
-STATIC_ROOT = '/home/giftovus/webapps/slp_static/static/'
+STATIC_ROOT = '/home/giftovus/webapps/slp_static/'
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
