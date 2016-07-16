@@ -39,6 +39,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
+    <link href="{% static 'css/clock.css' %}" rel="stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -129,7 +130,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Mentors/Speakers</h2>
+                    <h2>Mentors & Speakers</h2>
                     <p>Meet the mentors and speakers for 2016-2017</p>
                 </div>
             </div>
@@ -286,11 +287,80 @@
     <section id="apply" class="text-center content-section">
         <div class="download-section">
             <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2 style="text-shadow: 2px 2px #000;">Apply</h2>
-                    <p style="text-shadow: 2px 2px #000;">Apply to SLP San Diego by filling out a short form.</p>
-                    <a href="https://www.f6s.com/slp-sandiego2017/apply" class="btn btn-default btn-lg">Apply Now</a>
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h2 style="text-shadow: 2px 2px #000;">Interested?</h2>
+                        <p style="text-shadow: 2px 2px #000;">We only accept 25 Fellows per year!</p>
+                        <a href="https://www.f6s.com/slp-sandiego2017/apply" class="btn btn-default btn-lg">Apply Now</a>
+                    </div>
                 </div>
+                <div class="row">
+
+                    <!-- clock -->
+                    <div class="countdown-container container">
+                        <p style="text-shadow: 2px 2px #000;">Applications are closing soon!</p>
+                        <div class="clock row">
+
+                            <!-- days -->
+                            <div class="clock-item clock-days countdown-time-value col-xs-6 col-sm-3">
+                                <div class="wrap">
+                                    <div class="inner">
+                                        <div id="canvas-days" class="clock-canvas"></div>
+                                        <div class="text">
+                                            <p class="val">0</p>
+                                            <p class="type-days type-time">DAYS</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- hours -->
+
+                            <div class="clock-item clock-hours countdown-time-value col-xs-6 col-sm-3">
+                                <div class="wrap">
+                                    <div class="inner">
+                                        <div id="canvas-hours" class="clock-canvas"></div>
+                                        <div class="text">
+                                            <p class="val">0</p>
+                                            <p class="type-hours type-time">HOURS</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- minutes -->
+                            <div class="clock-item clock-minutes countdown-time-value col-xs-6 col-sm-3">
+                                <div class="wrap">
+                                    <div class="inner">
+                                        <div id="canvas-minutes" class="clock-canvas"></div>
+                                        <div class="text">
+                                            <p class="val">0</p>
+                                            <p class="type-minutes type-time">MINUTES</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- seconds -->
+                            <div class="clock-item clock-seconds countdown-time-value col-xs-6 col-sm-3">
+                                <div class="wrap">
+                                    <div class="inner">
+                                        <div id="canvas-seconds" class="clock-canvas"></div>
+                                        <div class="text">
+                                            <p class="val">0</p>
+                                            <p class="type-seconds type-time">SECONDS</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
             </div>
         </div>
     </section>
@@ -357,7 +427,7 @@
                 <div class="col-xs-10 col-xs-offset-1">
                     <div class="col-xs-6">
                         <a href="http://annemasri.com/">
-                            <img class="img-responsive center-block" style="padding: 2px; background-color: #FFF; margin-bottom: 5px;" src="http://annemasri.com/wp-content/uploads/2013/08/logoWeb722-resized-image-960x580.jpg" alt="Anne Masri"/>
+                            <img class="img-responsive center-block" style="padding: 2px; background-color: #FFF; margin-bottom: 5px; max-width: 200px;" src="http://annemasri.com/wp-content/uploads/2013/08/logoWeb722-resized-image-960x580.jpg" alt="Anne Masri"/>
                         </a>
                         <p>
                             <a href="http://annemasri.com/">Anne Masri</a>
@@ -381,6 +451,7 @@
 <!-- libs -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 <!-- Plugin JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
@@ -389,6 +460,57 @@
 
 <!-- Theme JavaScript -->
 <script src="{% static 'js/grayscale.min.js' %}"></script>
+
+<script src="{% static 'js/kinetic.js' %}"></script>
+<script src="{% static 'js/jquery.final-countdown.js' %}"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        'use strict';
+
+        var start = Date.parse('Wed June 1 19:20:44 +0000 2016')/1000;
+
+        var end = Date.parse('Sun Jul 31 24:00:00 +0000 2016')/1000;
+
+        var now = new Date().getTime() / 1000;
+
+        $('.countdown-container').final_countdown({
+            start: start,
+            end: end,
+            now: now,
+            selectors: {
+                value_seconds: '.clock-seconds .val',
+                canvas_seconds: 'canvas-seconds',
+                value_minutes: '.clock-minutes .val',
+                canvas_minutes: 'canvas-minutes',
+                value_hours: '.clock-hours .val',
+                canvas_hours: 'canvas-hours',
+                value_days: '.clock-days .val',
+                canvas_days: 'canvas-days'
+            },
+            seconds: {
+                borderColor: '#FF9966',
+                borderWidth: '6'
+            },
+            minutes: {
+                borderColor: '#ACC742',
+                borderWidth: '6'
+            },
+            hours: {
+                borderColor: '#ECEFCB',
+                borderWidth: '6'
+            },
+            days: {
+                borderColor: '#7995D5',
+                borderWidth: '6'
+            }}, function() {
+        // Finish callback
+        });
+    });
+
+</script>
 
 </body>
 </html>
