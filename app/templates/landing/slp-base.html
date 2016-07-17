@@ -466,15 +466,14 @@
 
 
 <script type="text/javascript">
-    $(document).ready(function() {
+    $(window).load(function() {
 
-        'use strict';
+        var start = 1464808844;
 
-        var start = Date.parse('Wed June 1 19:20:44 +0000 2016')/1000;
-
-        var end = Date.parse('Sun Jul 31 24:00:00 +0000 2016')/1000;
+        var end = 1470009600;
 
         var now = new Date().getTime() / 1000;
+
 
         $('.countdown-container').final_countdown({
             start: start,
