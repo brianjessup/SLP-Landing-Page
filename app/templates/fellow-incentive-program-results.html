@@ -1,0 +1,470 @@
+{% load i18n %}
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="{{ LANGUAGE_CODE }}" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="{{ LANGUAGE_CODE }}" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="{{ LANGUAGE_CODE }}" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="{{ LANGUAGE_CODE }}" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="{{ LANGUAGE_CODE }}" class=""> <!--<![endif]-->
+
+<title>SLP San Diego</title>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="{{ STATIC_URL }}SLP-Logo-Ball-16.ico?v=1" type="image/x-icon">
+    <link rel="icon" href="{{ STATIC_URL }}img/SLP/SLP-Logo-Ball-128.png" sizes="128x128">
+
+    {% block meta_properties %}
+        <meta name="application-name" content="SLP San Diego">
+        <meta name="description" content="">
+    {% endblock %}
+
+    {% block og_meta_properties %}
+        <meta property="og:type"          content="website" />
+        <meta property="og:url"           content="www.slpsandiego.com" />
+        <meta property="og:image"         content="{% static "img/SLP/SLP_Logo_AItransparent.png" %}" />
+        <meta property="og:title"         content="Startup Leadership Program San Diego" />
+        <meta property="og:description"   content="SLP San Diego is a non-profit, non-equity taking, leadership program for Founders and CEOs of startups." />
+    {% endblock %}
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Theme CSS -->
+    <link href="{% static 'css/grayscale.min.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <link href="{% static 'css/clock.css' %}" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <img src="{% static 'img/SLP/SLP_Logo_AItransparent-2.png' %}" style="margin-top: -12px;" alt="Startup Leadership" title="Startup Leadership" />
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                        <a class="page-scroll" href="#rules">Rules</a>
+                    <li>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#tools">Tools</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#results">Results</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Rules Section -->
+    <div id="rules" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Rules</h2>
+                    <p>
+                        We’re calling out to our past fellows to recommend high-quality candidates for our next year’s class. Our recruitment season is going very well - tracking 136% ahead of schedule! But we want to make this class the best of the best of the best, with honors!
+                    </p>
+
+                    <h3>Prizes</h3>
+                    <p>Besides that it’s the right thing for your friend to experience the amazing education, the local networking, and the lifetime global network, you should recommend folks to SLP because you could win:</p>
+                    <ul style="text-align: left; font-size: 18px;">
+                        <li><strong>Big Winner: </strong>
+                            <a href="https://www.amazon.com/Amazon-Echo-Bluetooth-Speaker-with-WiFi-Alexa/dp/B00X4WHP5E/">Amazon Echo</a> or
+                            <a href="https://www.fitbit.com/alta">Fitbit Alta</a> or <strong>$150 Amazon Gift Card</strong> - your call!
+                        </li>
+                        <li><strong>Smaller Winner: </strong>
+                            <a href="https://www.fitbit.com/alta">Fitbit Alta</a> or <strong>$100 Amazon Gift Card</strong> - your call!
+                        </li>
+                    </ul>
+                    <p></p>
+                    <h3>How It Works</h3>
+                    <p>We are going to run a random drawing for the two prizes. Entries to the drawing are earned based on the below and you may earn as many as you like - each entry adds to the chances of you being selected as the big/smaller winner.</p>
+                    <ul style="text-align: left; font-size: 18px;">
+                        <li><strong>1 entry / referred candidate</strong> who starts the application process</li>
+                        <li><strong>2 entries / completed application</strong> by the candidate</li>
+                        <li><strong>3 entries / selected fellow</strong></li>
+                    </ul>
+                    <p></p>
+                    <p><strong>Just make sure they reference you on the application form to get your entries recorded!</strong> Have them list you in the "recommendations" section or question that asks "Name any SLP Fellow you know or have met recently".</p>
+                    <h3>Who Can Participate</h3>
+                    <p>This contest is limited to the 200 past fellows who've graduated SLP in San Diego (and who aren't the current PLs). Those are good odds!</p>
+                    <h3>What?!?!</h3>
+                    <p><strong>If you recommend at least one person who completes their application, you get a snazzy SLP t-shirt!</strong> That’s right - no entries, no drawing - recommend someone who completes the application, get a t-shirt.</p>
+                </div>
+            </div>
+            <div class="row">
+
+                <!-- clock -->
+                <div class="countdown-container container">
+                    <p style="text-shadow: 2px 2px #000;">Applications are closing August 15th! Make sure to get your recommendations in soon!</p>
+                    <div class="clock row">
+
+                        <!-- days -->
+                        <div class="clock-item clock-days countdown-time-value col-xs-6 col-sm-3">
+                            <div class="wrap">
+                                <div class="inner">
+                                    <div id="canvas-days" class="clock-canvas"></div>
+                                    <div class="text">
+                                        <p class="val">0</p>
+                                        <p class="type-days type-time">DAYS</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- hours -->
+
+                        <div class="clock-item clock-hours countdown-time-value col-xs-6 col-sm-3">
+                            <div class="wrap">
+                                <div class="inner">
+                                    <div id="canvas-hours" class="clock-canvas"></div>
+                                    <div class="text">
+                                        <p class="val">0</p>
+                                        <p class="type-hours type-time">HOURS</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- minutes -->
+                        <div class="clock-item clock-minutes countdown-time-value col-xs-6 col-sm-3">
+                            <div class="wrap">
+                                <div class="inner">
+                                    <div id="canvas-minutes" class="clock-canvas"></div>
+                                    <div class="text">
+                                        <p class="val">0</p>
+                                        <p class="type-minutes type-time">MINUTES</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- seconds -->
+                        <div class="clock-item clock-seconds countdown-time-value col-xs-6 col-sm-3">
+                            <div class="wrap">
+                                <div class="inner">
+                                    <div id="canvas-seconds" class="clock-canvas"></div>
+                                    <div class="text">
+                                        <p class="val">0</p>
+                                        <p class="type-seconds type-time">SECONDS</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rules Section -->
+    <div id="tools" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Tools</h2>
+                    <p>How about we make it ridiculously easy for you to send a friend to SLP? All you need to do is click the magic email button below and add some email addresses.</p>
+                    <a href="mailto:replace_me_with_lucky_fellow@mail.com?Subject=Starting%20a%20startup%20-%20what%20helped%20me&Body=Hi,%0A%0AI%20just%20found%20out%20that%20the%20Startup%20Leadership%20Program%20is%20accepting%20new%20applicants%20until%20August%2015th%20and%20I%20wanted%20to%20pass%20it%20on%20to%20you.%20%0A%0AI%20went%20through%20the%20Program%20to%20hone%20my%20business%20skills%20and%20grow%20my%20network%20and%20I%20thought%20it%20helped%20me%20tremendously%20with%20my%20work.%20It's%20a%20non-profit,%20non-equity%20taking%20training%20program%20-%20a%20mini-MBA%20in%20starting%20your%20own%20business%20led%20by%20people%20who%20want%20to%20give%20back%20to%20the%20community.%20%0A%0AThe%20curriculum%20and%20mentors%20are%20here:%20http://www.slpsandiego.com/%20%20%0A%0ALet%20me%20know%20if%20you%20have%20any%20questions%20about%20my%20experience.%20" class="btn btn-default btn-lg">Magic Email Generator</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <div id="about" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Results</h2>
+                    <p>Last updated August 5</p>
+                    <table  style="background-color: #000;" class="table">
+                        <thead>
+                            <tr>
+                                <th>Referring Fellow</th>
+                                <th>Applicants</th>
+                                <th>Status</th>
+                                <th>T-shirt</th>
+                                <th>Total Entries</th>
+                            </tr>
+                        </thead>
+                        <tbody  class="text-left">
+                            <tr>
+                                <td>Fabrice Gould</td>
+                                <td>Sat W.</td>
+                                <td>Finalized</td>
+                                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td style="border-top: none;"></td>
+                                <td style="border-top: none;">Eric W.</td>
+                                <td style="border-top: none;">Finalized</td>
+                                <td style="border-top: none;"></td>
+                                <td style="border-top: none;"></td>
+                            </tr>
+                            <tr>
+                                <td style="border-top: none;"></td>
+                                <td style="border-top: none;">Rashmi I.</td>
+                                <td style="border-top: none;">Finalized</td>
+                                <td style="border-top: none;"></td>
+                                <td style="border-top: none;"></td>
+                            </tr>
+                            <tr>
+                                <td>Dan Knudsen</td>
+                                <td>Eric W.</td>
+                                <td>Finalized</td>
+                                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td style="border-top: none;"></td>
+                                <td style="border-top: none;">Scott F.</td>
+                                <td style="border-top: none;">In Progress</td>
+                                <td style="border-top: none;"></td>
+                                <td style="border-top: none;"></td>
+                            </tr>
+                            <tr>
+                                <td>Darryl Kuhn</td>
+                                <td>Jeff M.</td>
+                                <td>Finalized</td>
+                                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Joel Stern</td>
+                                <td>Amanda S.</td>
+                                <td>Finalized</td>
+                                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Renee Zau</td>
+                                <td>Amanda S.</td>
+                                <td>Finalized</td>
+                                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Dustin Bradley</td>
+                                <td>Amanda S.</td>
+                                <td>Finalized</td>
+                                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Nathan Ramasarma</td>
+                                <td>Rashmi I.</td>
+                                <td>Finalized</td>
+                                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Forest Flodin</td>
+                                <td>Ryan A.</td>
+                                <td>Finalized</td>
+                                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Chad Trytten</td>
+                                <td>Eric W.</td>
+                                <td>Finalized</td>
+                                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Melani Gordon</td>
+                                <td>Eric W.</td>
+                                <td>Finalized</td>
+                                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Ping Wang</td>
+                                <td>Eric W.</td>
+                                <td>Finalized</td>
+                                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Ruggero Scorcioni</td>
+                                <td>Eric W.</td>
+                                <td>Finalized</td>
+                                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Sid Shetye</td>
+                                <td>Eric W.</td>
+                                <td>Finalized</td>
+                                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Tom Perkowski</td>
+                                <td>Eric W.</td>
+                                <td>Finalized</td>
+                                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Ryan Willemsen</td>
+                                <td>Arin W.</td>
+                                <td>Finalized</td>
+                                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Marco Soto</td>
+                                <td>Anna Z.</td>
+                                <td>Finalized</td>
+                                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Dr. Payton Roberts</td>
+                                <td>Kelsey S.</td>
+                                <td>Finalized</td>
+                                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Naz Athina Kallel</td>
+                                <td>Anna Z.</td>
+                                <td>In Progress</td>
+                                <td></td>
+                                <td>1</td>
+                            </tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rules Section -->
+    <div class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <p>Feel free to email us if you have any questions, give us a suggestion, or to just say hello!</p>
+                    <script type="text/javascript" src="https://form.jotform.com/jsform/61855286736165"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Startup Leadership Program 2016</p>
+        </div>
+    </footer>
+
+
+<!-- libs -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3BWZnqYdoOzctHN9xi_C_mgFHHHjTy6U"></script>
+
+<!-- Theme JavaScript -->
+<script src="{% static 'js/grayscale.min.js' %}"></script>
+
+<script src="{% static 'js/kinetic.js' %}"></script>
+<script src="{% static 'js/jquery.final-countdown.js' %}"></script>
+
+
+<script type="text/javascript">
+    $(window).load(function() {
+
+        var start = 1464808844;
+
+        var end = 1471330800;
+
+        var now = new Date().getTime() / 1000;
+
+
+        $('.countdown-container').final_countdown({
+            start: start,
+            end: end,
+            now: now,
+            selectors: {
+                value_seconds: '.clock-seconds .val',
+                canvas_seconds: 'canvas-seconds',
+                value_minutes: '.clock-minutes .val',
+                canvas_minutes: 'canvas-minutes',
+                value_hours: '.clock-hours .val',
+                canvas_hours: 'canvas-hours',
+                value_days: '.clock-days .val',
+                canvas_days: 'canvas-days'
+            },
+            seconds: {
+                borderColor: '#FF9966',
+                borderWidth: '6'
+            },
+            minutes: {
+                borderColor: '#ACC742',
+                borderWidth: '6'
+            },
+            hours: {
+                borderColor: '#ECEFCB',
+                borderWidth: '6'
+            },
+            days: {
+                borderColor: '#7995D5',
+                borderWidth: '6'
+            }}, function() {
+        // Finish callback
+        });
+    });
+
+</script>
+
+
+
+</body>
+</html>

@@ -11,6 +11,7 @@ urlpatterns = patterns('',
     # -> If the user is logged in, they are shown the dashboard.
     # -> If not, they are shown the landing page.
     url(r'^$', TemplateView.as_view(template_name='landing/slp-base.html'), name='home'),
+    url(r'^referrals/$', TemplateView.as_view(template_name='fellow-incentive-program-results.html'), name='incentive_program'),
 
 
 )
